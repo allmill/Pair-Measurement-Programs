@@ -22,7 +22,32 @@ namespace MartianWeight
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //greeting / initializing context
+            Console.WriteLine("Martian Weight Calculator Program");
+            Console.WriteLine("Please enter the weights of objects as they are on Earth: ");
+
+            //grab value(s)
+            string userInput = Console.ReadLine();
+            //const for mars weight % of earth's
+            const decimal weightPercentOnMars = 0.378M;
+
+            string[] objectWeight = userInput.Split(new char[] { ' ', ',', '|' });
+
+            //loop through each weight value in objectWeight array
+
+            for (int index = 0; index < objectWeight.Length; index++)
+            {
+                // Read the individual value as a decimal
+                decimal originalWeight = decimal.Parse(objectWeight[index]);
+                // Convert Earth weight to Mars weight
+                decimal weightOnMars = originalWeight * weightPercentOnMars;
+                
+                //present calculation to user as clean integers, may be off by 1 due to rounding
+                Console.WriteLine($"Weight on Earth: {(int)originalWeight}lbs | Weight on Mars: {(int)weightOnMars}");
+            }
+
+            //maintain window open with console read
+            Console.Read();
         }
     }
 }
