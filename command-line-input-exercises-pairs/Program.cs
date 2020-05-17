@@ -29,7 +29,7 @@ namespace command_line_input_exercises_pairs
             decimal tenderedAmount = decimal.Parse(amount);
 
             decimal changeAmount = tenderedAmount - billAmount;
-            Console.WriteLine("The change required = " + changeAmount);
+            Console.WriteLine($"The change required = {changeAmount:C2}");
 
 
 
