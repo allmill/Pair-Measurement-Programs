@@ -43,7 +43,7 @@ namespace MartianWeight
                 decimal weightOnMars = originalWeight * weightPercentOnMars;
                 
                 //present calculation to user as clean integers, may be off by 1 due to rounding
-                Console.WriteLine($"Weight on Earth: {(int)originalWeight}lbs | Weight on Mars: {(int)weightOnMars}");
+                Console.WriteLine($"Weight on Earth: {(int)originalWeight}lbs | Weight on Mars: {(int)weightOnMars}lbs");
             }
 
             //maintain window open with console read
